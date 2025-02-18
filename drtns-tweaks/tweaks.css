@@ -16,7 +16,8 @@
   border-radius: 5.5px !important;
 }
 .tab span.title {
-  font-size: 13px !important;
+  font-size: 14px !important;
+  padding: 0 8px !important;
 }
 
 .tabbar-wrapper {
@@ -48,6 +49,15 @@
 }
 .tabbar-wrapper svg.svg-tab-stack {
   display: none;
+}
+.tabbar-wrapper div.separator {
+  position: relative !important;
+  height: 7px !important;
+  padding-left: 2px !important;
+}
+.tabbar-wrapper div.separator hr {
+  margin: 0 !important;
+  width: 100% !important;
 }
 .tabbar-wrapper .accordion-toggle-arrow {
   display: none !important;

@@ -15,7 +15,8 @@
     border-radius: 5.5px !important;
 
     span.title {
-        font-size: 13px !important;
+        font-size: 14px !important;
+        padding: 0 8px !important;
     }
 }
 
@@ -46,6 +47,17 @@
     */
     svg.svg-tab-stack {
         display: none;
+    }
+
+    div.separator {
+        position: relative !important;
+        height: 7px !important;
+        padding-left: 2px !important;
+
+        hr {
+            margin: 0 !important;
+            width: 100% !important;
+        }
     }
 
     /**
