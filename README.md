@@ -1,3 +1,7 @@
+```
+VivalArc, but with fully redesigned UI.
+```
+
 This project mainly includes a set of CSS files and a Vivaldi theme. With a few simple steps of configuration, you can modify Vivaldi into Arc style. Compatible with macOS, Windows, and Linux.
 
 ## VivalArc Blog

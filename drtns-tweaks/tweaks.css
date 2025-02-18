@@ -1,0 +1,422 @@
+@charset "UTF-8";
+/**
+    Main styles
+*/
+#browser.win, * {
+  font-family: "SF Pro", "SF Pro Display", "SF Pro Text", "SF Pro Icons", sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/**
+    Tabs
+*/
+.tab {
+  border-radius: 5.5px !important;
+}
+.tab span.title {
+  font-size: 13px !important;
+}
+
+.tabbar-wrapper {
+  padding: 0 6px !important;
+  /**
+      Tab stack
+  */
+  /**
+      Accordion toggle arrow
+  */
+  /**
+      New tab button
+  */
+}
+.tabbar-wrapper * {
+  --PositionX: 0px !important;
+  --PositionY: 0px !important;
+}
+.tabbar-wrapper .tab-strip {
+  display: flex;
+  flex-direction: column;
+}
+.tabbar-wrapper .tab-strip > span {
+  display: block !important;
+  height: 36px !important;
+}
+.tabbar-wrapper #tabs-tabbar-container {
+  padding: 4px 0 !important;
+}
+.tabbar-wrapper svg.svg-tab-stack {
+  display: none;
+}
+.tabbar-wrapper .accordion-toggle-arrow {
+  display: none !important;
+}
+.tabbar-wrapper .toolbar.toolbar-tabbar {
+  position: unset !important;
+}
+.tabbar-wrapper .toolbar.toolbar-tabbar .button-toolbar.newtab {
+  --PositionX: 0px !important;
+  --PositionY: 0px !important;
+  position: relative !important;
+  top: unset !important;
+  left: unset !important;
+}
+.tabbar-wrapper .toolbar.toolbar-tabbar .button-toolbar.newtab button:after {
+  content: "New Tab";
+  font-size: 13px;
+  font-weight: 300;
+  padding-top: 2px;
+  color: #ffffff;
+}
+
+/**
+    Separator
+*/
+.separator-wsbutton {
+  display: none !important;
+}
+
+/**
+    Global blur effect
+*/
+#main {
+  backdrop-filter: blur(48px) !important;
+  background-color: #000000ab !important;
+}
+
+/**
+    Mainbar
+*/
+.mainbar {
+  padding: 4px 0 !important;
+}
+.mainbar button.vivaldi {
+  margin: 0 3px !important;
+}
+
+/**
+    Panels
+*/
+.panel-group {
+  background: unset !important;
+  box-shadow: unset !important;
+  border-right: unset !important;
+}
+.panel-group .panel {
+  background: transparent !important;
+  margin: 8px 0px !important;
+  border-radius: unset !important;
+  padding: 0px 8px !important;
+}
+.panel-group .panel button, .panel-group .panel input[type=button], .panel-group .panel input[type=submit] {
+  background: #ffffff0d !important;
+  border: none !important;
+  backdrop-filter: blur(15px) !important;
+  padding: 4px 8px !important;
+  border-radius: 8px !important;
+}
+.panel-group .toolbar-group {
+  gap: 4px;
+}
+.panel-group div[role=rowgroup] {
+  margin-right: 8px !important;
+}
+.panel-group input[type=text], .panel-group input[type=search] {
+  border: 1px solid #1e1e1e !important;
+  background: transparent !important;
+  border-radius: 8px !important;
+  outline: none !important;
+}
+.panel-group span.VivaldiSvgIcon {
+  min-width: 16px !important;
+}
+.panel-group button.close {
+  padding: 11px !important;
+}
+
+#browser:not(.tabs-top):not(.tabs-bottom) #panels-container.overlay {
+  background: unset !important;
+}
+
+/**
+    Workspace button
+*/
+button[name=WorkspaceButton] span.button-title {
+  font-size: 13px !important;
+}
+
+/**
+    Popup
+*/
+.button-popup {
+  background: #0000009c !important;
+  border: 1px solid #1e1e1e !important;
+  backdrop-filter: blur(23px) !important;
+  border-radius: 8px !important;
+}
+.button-popup .ContentBlocker-Header {
+  padding: 14px 16px !important;
+  padding-top: 15px !important;
+  border-bottom: 1px solid #1e1e1eab !important;
+}
+.button-popup .dialog-content .ContentBlocker-Field {
+  flex-direction: row !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  gap: 2px !important;
+}
+.button-popup .dialog-content .ContentBlocker-Field:nth-child(2) {
+  flex-wrap: unset !important;
+  flex-direction: row !important;
+}
+.button-popup .dialog-content .ContentBlocker-Field:nth-child(2) button, .button-popup .dialog-content .ContentBlocker-Field:nth-child(2) input[type=button], .button-popup .dialog-content .ContentBlocker-Field:nth-child(2) input[type=submit] {
+  font-size: 12px !important;
+  min-height: 30px !important;
+  margin: 0 !important;
+}
+.button-popup button, .button-popup input[type=button], .button-popup input[type=submit] {
+  background: #ffffff1a;
+  border: none !important;
+  backdrop-filter: blur(15px) !important;
+  padding: 4px 8px !important;
+  border-radius: 8px !important;
+  cursor: pointer !important;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  height: auto !important;
+  text-overflow: ellipsis !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+}
+.button-popup button:active, .button-popup input[type=button]:active, .button-popup input[type=submit]:active {
+  transform: scale(0.97) !important;
+}
+
+input[type=submit] {
+  min-width: 93px !important;
+}
+
+/**
+    Dialog
+*/
+.dialog-header {
+  padding: 12px 16px !important;
+  border-bottom: 1px solid #1e1e1e !important;
+  background: #00000056 !important;
+}
+
+.dialog-content {
+  padding: 12px 16px !important;
+}
+
+.dialog-footer {
+  background: #00000056 !important;
+  border-top: 1px solid #1e1e1e !important;
+  padding: 8px !important;
+  align-items: center !important;
+}
+.dialog-footer button, .dialog-footer input[type=button], .dialog-footer input[type=submit] {
+  min-height: 100% !important;
+}
+
+/**
+    QR Share Dialog
+*/
+.qr-share-dialog .qr-image {
+  filter: invert(0.94) !important;
+  margin: 0 !important;
+  box-shadow: unset !important;
+}
+.qr-share-dialog input[type=url] {
+  width: 100% !important;
+  background-color: transparent !important;
+  border: none !important;
+  padding: 0px 12px !important;
+  padding-bottom: 4px !important;
+  font-size: 14px !important;
+  font-weight: 300 !important;
+}
+.qr-share-dialog .dialog-content {
+  padding: 0 !important;
+  gap: 0 !important;
+  display: contents !important;
+}
+
+/**
+    Bookmark Popup
+*/
+.BookmarkPopup {
+  border: unset !important;
+  background: transparent !important;
+}
+.BookmarkPopup-TextInputWrapper {
+  padding: 0 !important;
+}
+.BookmarkPopup-TextInputWrapper .BookmarkInputField {
+  border-bottom: 1px solid #1e1e1e !important;
+}
+.BookmarkPopup-TextInputWrapper .BookmarkInputField-Title {
+  font-weight: 600 !important;
+}
+.BookmarkPopup .BookmarkLocationSelector-Header {
+  padding: 6px 0 !important;
+}
+.BookmarkPopup .BookmarkLocationSelector-SpeedDialCheckbox {
+  padding: 0 !important;
+}
+.BookmarkPopup .BookmarkLocationSelector-SearchInput {
+  padding: 0 !important;
+}
+.BookmarkPopup .BookmarkLocationSelector-FolderList {
+  padding: 0 !important;
+}
+.BookmarkPopup .button-toolbar {
+  padding: 0 !important;
+}
+
+/**
+    Checkbox
+*/
+input[type=checkbox] {
+  border-radius: 4px !important;
+  background: #3f3f3f96 !important;
+  border: 1px solid #1e1e1e !important;
+}
+input[type=checkbox]:checked:before, input[type=checkbox]:checked:after {
+  background-color: white !important;
+}
+
+/**
+    Workspaces
+*/
+.WorkspacePopup {
+  background: transparent !important;
+  border: unset !important;
+}
+.WorkspacePopup .no-workspaces-note {
+  padding: 8px !important;
+}
+.WorkspacePopup .actions {
+  background: #00000056 !important;
+  border-top: 1px solid #1e1e1e !important;
+  padding: 8px !important;
+  align-items: center !important;
+}
+.WorkspacePopup .actions .button-toolbar {
+  width: 100% !important;
+}
+.WorkspacePopup .actions .button-toolbar button {
+  width: 100% !important;
+}
+.WorkspacePopup .actions button {
+  min-height: 32px;
+  border-radius: 4px !important;
+  background: #ffffff0d;
+}
+.WorkspacePopup .workspace-item-wrapper {
+  border-radius: 4px !important;
+}
+.WorkspacePopup .workspace-item-wrapper:not(.selected) {
+  background: transparent !important;
+  backdrop-filter: unset !important;
+}
+.WorkspacePopup .workspace-item-wrapper.selected {
+  background: #ffffff0d !important;
+}
+.WorkspacePopup .workspace-item-wrapper span.VivaldiSvgIcon {
+  padding: 2px !important;
+}
+.WorkspacePopup button.this-window {
+  background: transparent !important;
+  backdrop-filter: unset !important;
+  padding: 2px 8px !important;
+}
+
+/**
+    Internal page
+*/
+.internal-page:after {
+  content: "build a magic (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧";
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 300;
+  width: 100%;
+  height: 100%;
+}
+
+/**
+    Address bar
+*/
+.UrlBar-AddressField {
+  background: #00000026 !important;
+  border: 1px solid #1e1e1e !important;
+  outline: none !important;
+}
+
+/**
+    OmniDropdown
+*/
+.OmniDropdown {
+  border-radius: 12px !important;
+  padding: 9px 12px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 8px !important;
+  background: #00000082 !important;
+  backdrop-filter: blur(23px) !important;
+}
+.OmniDropdown .OmniDropdown-Label {
+  padding: 7px 0px !important;
+}
+
+/**
+    Global scrollbar replacement
+*/
+::-webkit-scrollbar {
+  width: 3px !important;
+}
+
+::-webkit-scrollbar-track {
+  background: #00000026 !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e1e1e !important;
+  border-radius: 12px !important;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1e1e1e !important;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: #1e1e1e !important;
+}
+
+::-webkit-scrollbar-corner {
+  background: #00000026 !important;
+}
+
+::-webkit-scrollbar-button {
+  display: none !important;
+}
+
+/**
+    Global textarea, select
+*/
+textarea {
+  background: #0000000f !important;
+  border: solid 1px #2727276c !important;
+  color: white !important;
+  outline: none !important;
+  font-size: 15px !important;
+}
+
+select {
+  background: #0000000f !important;
+  border: solid 1px #2727276c !important;
+  color: white !important;
+  outline: none !important;
+}

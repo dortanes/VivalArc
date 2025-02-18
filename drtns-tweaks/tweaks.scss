@@ -1,0 +1,485 @@
+/**
+    Main styles
+*/
+#browser.win, * {
+    font-family: 'SF Pro', 'SF Pro Display', 'SF Pro Text', 'SF Pro Icons', sans-serif !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/**
+    Tabs
+*/
+.tab {
+    border-radius: 5.5px !important;
+
+    span.title {
+        font-size: 13px !important;
+    }
+}
+
+.tabbar-wrapper {
+    padding: 0 6px !important;
+
+    * {
+        --PositionX: 0px !important;
+        --PositionY: 0px !important;
+    }
+
+    .tab-strip {
+        display: flex;
+        flex-direction: column;
+
+        > span {
+            display: block !important;
+            height: 36px !important;
+        }
+    }
+
+    #tabs-tabbar-container {
+        padding: 4px 0 !important;
+    }
+
+    /**
+        Tab stack
+    */
+    svg.svg-tab-stack {
+        display: none;
+    }
+
+    /**
+        Accordion toggle arrow
+    */
+    .accordion-toggle-arrow {
+        display: none !important;
+    }
+
+    /**
+        New tab button
+    */
+    .toolbar.toolbar-tabbar {
+        position: unset !important;
+        .button-toolbar.newtab {
+            --PositionX: 0px !important;
+            --PositionY: 0px !important;
+            position: relative !important;
+            top: unset !important;
+            left: unset !important;
+
+            button {
+                &:after {
+                    content: "New Tab";
+                    font-size: 13px;
+                    font-weight: 300;
+                    padding-top: 2px;
+                    color: #ffffff;
+                }
+            }
+        }   
+    }
+}
+
+/**
+    Separator
+*/
+.separator-wsbutton {
+    display: none !important;
+}
+
+
+/**
+    Global blur effect
+*/
+#main {
+    backdrop-filter: blur(48px) !important;
+    background-color: #000000ab !important;
+}
+
+/**
+    Mainbar
+*/
+.mainbar {
+    padding: 4px 0 !important;
+
+    button.vivaldi {
+        margin: 0 3px !important;
+    }
+}
+
+/**
+    Panels
+*/
+.panel-group {
+    background: unset !important;
+    box-shadow: unset !important;
+    border-right: unset !important;
+
+    .panel {
+        background: transparent !important;
+        margin: 8px 0px !important;
+        border-radius: unset !important;
+        padding: 0px 8px !important;
+
+        button, input[type="button"], input[type="submit"] {
+            background: #ffffff0d !important;
+            border: none !important;
+            backdrop-filter: blur(15px) !important;
+            padding: 4px 8px !important;
+            border-radius: 8px !important;
+        }
+    }
+
+    .toolbar-group {
+        gap: 4px;
+    }
+
+    div[role="rowgroup"] {
+        margin-right: 8px !important;
+    }
+
+    input[type="text"], input[type="search"] {
+        border: 1px solid #1e1e1e !important;
+        // backdrop-filter: blur(23px) !important;
+        background: transparent !important;
+        border-radius: 8px !important;
+        outline: none !important;
+    }
+
+    span.VivaldiSvgIcon {
+        min-width: 16px !important;
+    }
+
+    button.close {
+        padding: 11px !important;
+    }
+}
+
+#browser:not(.tabs-top):not(.tabs-bottom) #panels-container.overlay {
+    background: unset !important;
+}
+
+/**
+    Workspace button
+*/
+button[name="WorkspaceButton"] {
+    span.button-title {
+        font-size: 13px !important;
+    }
+}
+
+/**
+    Popup
+*/
+.button-popup {
+    background: #0000009c !important;
+    border: 1px solid #1e1e1e !important;
+    backdrop-filter: blur(23px) !important;
+    // overflow: hidden !important;
+    border-radius: 8px !important;
+
+    .ContentBlocker-Header {
+        padding: 14px 16px !important;
+        padding-top: 15px !important;
+        border-bottom: 1px solid #1e1e1eab !important;
+    }
+
+    .dialog-content {
+        .ContentBlocker-Field {
+            flex-direction: row !important;
+            flex-wrap: wrap !important;
+            justify-content: center !important;
+            gap: 2px !important;
+        }
+
+        .ContentBlocker-Field:nth-child(2) {
+            flex-wrap: unset !important;
+            flex-direction: row !important;
+
+            button, input[type="button"], input[type="submit"] {
+                font-size: 12px !important;
+                min-height: 30px !important;
+                margin: 0 !important;
+            }
+        }
+    }
+
+    button, input[type="button"], input[type="submit"] {
+        background: #ffffff1a;
+        border: none !important;
+        backdrop-filter: blur(15px) !important;
+        padding: 4px 8px !important;
+        border-radius: 8px !important;
+        cursor: pointer !important;
+        transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+        height: auto !important;
+
+        text-overflow: ellipsis !important;
+        overflow: hidden !important;
+        white-space: nowrap !important;
+
+        &:active {
+            transform: scale(0.97) !important;
+        }
+    }
+}
+
+input[type="submit"] {
+    min-width: 93px !important;
+}
+
+/**
+    Dialog
+*/
+.dialog-header {
+    padding: 12px 16px !important;
+    border-bottom: 1px solid #1e1e1e !important;
+    background: #00000056 !important;
+}
+
+.dialog-content {
+    padding: 12px 16px !important;
+}
+
+.dialog-footer {
+    background: #00000056 !important;
+    border-top: 1px solid #1e1e1e !important;
+    padding: 8px !important;
+    align-items: center !important;
+
+    button, input[type="button"], input[type="submit"] {
+        min-height: 100% !important;
+    }
+}
+
+
+
+/**
+    QR Share Dialog
+*/
+.qr-share-dialog {
+    .qr-image {
+        filter: invert(0.94) !important;
+        margin: 0 !important;
+        box-shadow: unset !important;
+    }
+
+    input[type="url"] {
+        width: 100% !important;
+        background-color: transparent !important;
+        border: none !important;
+        padding: 0px 12px !important;
+        padding-bottom: 4px !important;
+        font-size: 14px !important;
+        font-weight: 300 !important;
+    }
+
+    .dialog-content {
+        padding: 0 !important;
+        gap: 0 !important;
+        display: contents !important;
+    }
+}
+
+/**
+    Bookmark Popup
+*/
+.BookmarkPopup {
+    border: unset !important;
+    background: transparent !important;
+
+    &-TextInputWrapper {
+        padding: 0 !important;
+
+        .BookmarkInputField {
+            border-bottom: 1px solid #1e1e1e !important;
+        
+            &-Title {
+                font-weight: 600 !important;
+            }
+        }
+    }
+
+    .BookmarkLocationSelector-Header {
+        padding: 6px 0 !important;
+    }
+
+    .BookmarkLocationSelector-SpeedDialCheckbox {
+        padding: 0 !important;
+    }
+
+    .BookmarkLocationSelector-SearchInput {
+        padding: 0 !important;
+    }
+
+    .BookmarkLocationSelector-FolderList  {
+        padding: 0 !important;
+    }
+
+    .button-toolbar {
+        padding: 0 !important;
+    }
+}
+
+/**
+    Checkbox
+*/
+input[type="checkbox"] {
+    border-radius: 4px !important;
+    background: #3f3f3f96 !important;
+    border: 1px solid #1e1e1e !important;
+
+    &:checked {
+        &:before, &:after {
+            background-color: white !important;
+        }
+    }
+}
+
+/**
+    Workspaces
+*/
+.WorkspacePopup {
+    background: transparent !important;
+    border: unset !important;
+
+    .no-workspaces-note {
+        padding: 8px !important;
+    }
+
+    .actions {
+        background: #00000056 !important;
+        border-top: 1px solid #1e1e1e !important;
+        padding: 8px !important;
+        align-items: center !important;
+
+        .button-toolbar {
+            width: 100% !important;
+            button {
+                width: 100% !important;
+            }
+        }
+
+        button {
+            min-height: 32px;
+            border-radius: 4px !important;
+            background: #ffffff0d;
+        }
+    }
+
+    .workspace-item-wrapper {
+        border-radius: 4px !important;
+
+        &:not(.selected) {
+            background: transparent !important;
+            backdrop-filter: unset !important;
+        }
+
+        &.selected {
+            background: #ffffff0d !important;
+        }
+
+        span.VivaldiSvgIcon {
+            padding: 2px !important;
+        }
+    }
+
+    button.this-window {
+        background: transparent !important;
+        backdrop-filter: unset !important;
+        padding: 2px 8px !important;
+    }
+}
+
+/**
+    Internal page
+*/
+.internal-page {
+    &:after {
+        content: "build a magic (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧";
+        font-size: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 300;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+/**
+    Address bar
+*/
+.UrlBar-AddressField {
+    background: #00000026 !important;
+    border: 1px solid #1e1e1e !important;
+    outline: none !important;
+}
+
+/**
+    OmniDropdown
+*/
+.OmniDropdown {
+   border-radius: 12px !important;
+   padding: 9px 12px !important;
+   display: flex !important;
+   flex-direction: column !important;
+   gap: 8px !important;
+   background: #00000082 !important;
+   backdrop-filter: blur(23px) !important;
+
+   .OmniDropdown-Label {
+            padding: 7px 0px !important;
+    }
+}
+
+/**
+    Global scrollbar replacement
+*/
+::-webkit-scrollbar {
+    width: 3px !important;
+}
+
+::-webkit-scrollbar-track {
+    background: #00000026 !important;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1e1e1e !important;
+    border-radius: 12px !important;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #1e1e1e !important;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: #1e1e1e !important;
+}
+
+::-webkit-scrollbar-corner {
+    background: #00000026 !important;
+}
+
+::-webkit-scrollbar-button {
+    display: none !important;
+}
+
+/**
+    Global textarea, select
+*/
+textarea {
+    background: #0000000f !important;
+    border: solid 1px #2727276c !important;
+    color: white !important;
+    outline: none !important;
+    font-size: 15px !important;
+}
+
+select {
+    background: #0000000f !important;
+    border: solid 1px #2727276c !important;
+    color: white !important;
+    outline: none !important;
+
+}

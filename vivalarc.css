@@ -4,6 +4,8 @@ update: 2024.11.03
 vivaldi version: v6.6 - v7.0
 */
 
+@import url('./drtns-tweaks/tweaks.css');
+
 :root{
     --window-border:10px; /* window border, recommend 4px~16px */
     --mac-header:calc(var(--window-border) + 0px); /* title bar extra height */
