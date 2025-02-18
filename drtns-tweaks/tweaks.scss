@@ -496,3 +496,43 @@ select {
     outline: none !important;
 
 }
+
+/**
+    Quick commands
+*/
+.qc-modal {
+    .modal-wrapper {
+        background: #0000008a !important;
+        border-radius: 12px !important;
+        backdrop-filter: blur(30px) !important;
+    }
+
+    .qc-entry {
+        input {
+            padding: 8px 16px !important;
+            font-size: 18px !important;
+        }
+    }
+
+    .quick-commands {
+        background-color: transparent !important;
+    }
+
+    .quick-command {
+        padding: 0 16px !important;
+
+        &[data-selected] {
+            background-color: #ffffff1a !important;
+
+            .quick-command-title, .quick-command-url {
+                color: white !important;
+            }
+        }
+
+        .quick-command-title {
+            padding: 0 4px !important;
+            font-size: 14px !important;
+            font-weight: 500 !important;
+        }
+    }
+}
